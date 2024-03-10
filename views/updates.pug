@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title Update Book
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .form-wrapper
+            h1 Add/Edit Book
+            form(action="/update-cobj", method="post")
+                div
+                    label(for="book_name") Name:
+                    input(type="text", id="book_name", name="book_name", required)
+                div
+                    label(for="author") Author:
+                    input(type="text", id="author", name="author", required)
+                div
+                    label(for="publication_year") Publication Year:
+                    input(type="text", id="publication_year", name="publication_year", required)
+                div
+                    input(type="submit", value="Submit")
+            a(href="/") Return to the Homepage

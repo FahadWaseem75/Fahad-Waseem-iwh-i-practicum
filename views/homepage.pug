@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title Homepage
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Book Records
+        a(href="/update-cobj") Add/Edit Book
+        table
+            thead
+                tr
+                    th Name
+                    th Author
+                    th Publication Year
+            tbody
+                each book in books
+                    tr
+                        td= book.properties.book_name
+                        td= book.properties.author
+                        td= book.properties.publication_year
