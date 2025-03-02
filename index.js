@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PRIVATE_APP_ACCESS = 'pat-na1-a4f61b66-b346-499e-983d-b452b2090066';
+const PRIVATE_APP_ACCESS = process.env.HUBSPOT_ACCESS_TOKEN;
 
 // Route 1: Display Books
 app.get('/', async (req, res) => {
